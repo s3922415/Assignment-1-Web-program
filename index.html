@@ -1,68 +1,226 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Meow bookshop</title>
-  </head>
-  <body>
-    <header class="header">
-      <!--Create logo-->
-      <a href ="/" class = "logo">
-        <img src="image/logo .png" alt = "logo" width="80px"; height="80px" />
-      </a>
-      <input class = "menu-btn" type="checkbox" id = "menu-btn"/>
-      <label class = "menu-icon" for = "menu-btn"><span class = "nav-icon"></span></label>
-      <!--Create navigation bar-->
-      <div class = "navigation bar">
-        <ul class = "navigation navbar">
-          <il><a href = "#Homepage" title="Home page" id="#Homepage">Home page</a></il>
-          <il><a href = "#Category"title="Category page" id="Category">Category</a></il>
-          <il><a href = "#About" title="Bookshop information"id ="Information">About</a></il>
-        </ul>
-      </div>
-    </header>
-    <div class="category">
-        <h2>Home</h2>
-        <p>Welcome to CHEEMS Bookstore<br>
-      Please choose your favorite books and add to cart
-    </p>
-    </div>
-    <div class = "categorybox1">
-      <h2>Action</h2>
-      <div class = "left-column">
-        <div class = "action1">
-          <img src = "Image/ACtion 1.jpeg"/></div>
-      </div>
-      <div class = "middle-column">
-        <div class = "action2">
-          <img src = "Image/Action 2.jpeg"/></div>
-      </div>
-      <div class = "right-column">
-        <div class = "action3">
-          <img src = "Image/Action 4.jpeg"/></div>
-      </div>
-    </div>
+* {
+  box-sizing: border-box;
+}
 
+body {
+  padding: 0px;
+  margin: 0px; 
+  font-family: 'Times New Roman', Times, serif;
+  background-color : #b4ffff
+}
 
-    <div class = "categorybox2">
-      <h2>Romance</h2>
-      <div class = "left-column2">
-        <div class = "romance1">
-          <img src = "Image/Romance1.jpeg"/></div>
-      </div>
-      <div class = "middle-column2">
-        <div class = "romance2">
-          <img src = "Image/Romance2.jpeg"/></div>
-      </div>
-      <div class = "right-column2">
-        <div class = "romance3">
-          <img src = "Image/Romance3.jpeg"/></div>
-      </div>
-    </div>
-    <div class = "more"><p>More category</p></div>
-  </main>  
-</body>
-</html>
+.header {
+  background-color : rgb(255, 255, 255);
+  box-shadow : 1px 1px 4px rgba(0, 0, 0, .2);
+  width: 100%;
+  z-index: 3;
+  height: 100px;
+}
+
+.header ul {
+  margin:0;
+  padding:0;
+  overflow:hidden;
+  background-color: transparent;
+  width: auto;
+  float:right;
+  margin-top:8px;
+}
+
+.header il {
+  display: inline-block;
+  padding:15px 5px;
+}
+
+.header ul a {
+  display:block;
+  outline:none;
+  padding: 20px;
+  border-right:none;
+  text-decoration:none;
+  text-align: center;
+  font-size: medium;
+}
+
+.header .logo {
+  float:left;
+  display:block;
+  padding:3px;
+  margin-left: 2%;
+  margin-right: 10px;
+}
+
+.header ul a:hover {
+  background-color: rgba(221, 221, 221, 0.577);
+}
+
+.header .menu { 
+  clear:both;
+  max-height: 0;
+  transition: max-height .2s ease-out;
+}
+
+.header .menu-btn {
+  display:none;
+}
+
+.header .menu-btn:checked ~ .menu{
+  max-height:240px;
+}
+
+.category {
+  padding: 70px 0;
+  text-align: center;
+}
+
+.categorybox1 {
+  padding-top: 10px;
+  box-shadow: 1px 1px 4px rgba(0, 0, 0, .2);
+  background-color: aliceblue;
+  width: 1200px;
+  height: 600px;
+  margin: 0px auto;
+  position:relative;  
+  content: "";
+  display:table;
+  clear:both;
+}
+
+.categorybox1 h2 {
+  text-align : center;
+  line-height: 70px;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.categorybox1 .left-column {
+  width:400px;
+  height:600px;
+  float:left;
+}
+
+.categorybox1 .middle-column {
+  width:400px;
+  height:600px;
+  float:left;
+}
+
+.categorybox1 .right-column {
+  width:400px;
+  float: left;
+  height: 600px;
+}
+
+.categorybox1 .action1 {
+  margin-left: 45px;
+  margin-top: 50px;
+  max-width: 300px;
+  max-height: 800px;
+  display:block;
+  width:auto;
+  height:auto;
+}
+
+.categorybox1 .action2 {
+  margin-left: 35px;
+  margin-top: 50px;
+  max-width: 300px;
+  max-height: 800px;
+  display:block;
+  width:auto;
+  height:auto;
+}
+
+.categorybox1 .action3 {
+  margin-left: 35px;
+  margin-top: 50px;
+  max-width: 300px;
+  max-height: 200px;
+  display:block;
+  width:300;
+  height:auto;
+}
+
+.categorybox2 {
+  box-shadow: 1px 1px 4px rgba(0, 0, 0, .2);
+  background-color: aliceblue;
+  width: 1200px;
+  height: 600px;
+  margin: 30px auto;
+  position:relative;  
+  content: "";
+  display:table;
+  clear:both;
+}
+
+.categorybox2 h2 {
+  text-align : center;
+  line-height: 70px;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.categorybox2 .left-column2 {
+  width:400px;
+  height:600px;
+  float:left;
+}
+
+.categorybox2 .middle-column2 {
+  width:400px;
+  height:600px;
+  float:left;
+}
+
+.categorybox2 .right-column2 {
+  width:400px;
+  float: left;
+  height:600px;
+}
+
+.categorybox2 img{
+  max-width: 300px;
+  max-height: 800px;
+  width: auto;
+  height: auto;
+}
+
+.categorybox2 .romance1 img{
+  height: 450px;
+}
+
+.categorybox2 .romance1 {
+  margin-left: 45px;
+  margin-top: 50px;
+  max-width: 300px;
+  max-height: 700px;
+  display:block;
+  width:auto;
+  height:auto;
+}
+
+.categorybox2 .romance2 {
+  
+  margin-left: 35px;
+  margin-top: 50px;
+  max-width: 300px;
+  max-height: 800px;
+  display:block;
+  width:auto;
+  height:auto;
+}
+
+.categorybox2 .romance3 {
+  margin-left: 35px;
+  margin-top: 50px;
+  max-width: 300px;
+  max-height: 200px;
+  display:block;
+  width:300;
+  height:auto;
+}
+
